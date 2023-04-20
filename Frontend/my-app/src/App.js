@@ -2,14 +2,20 @@ import { Box } from '@chakra-ui/react';
 import React from 'react';
 import MainNavbar from './Header/Navbar';
 import AllRoutes from './Routes/AllRoutes';
+import { Footer } from './Footer/Footer';
 
 
 function App() {
   return (
-      <Box>
+      <>
+        {/* nav bar ------------ */}
         <MainNavbar />
+        {/* routes ------ */}
         <AllRoutes />
-      </Box>
+
+      {/* footer ------- */}
+      <Footer />
+      </>
   );
 }
 
