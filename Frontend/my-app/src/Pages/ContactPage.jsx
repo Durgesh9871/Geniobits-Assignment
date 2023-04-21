@@ -1,4 +1,4 @@
-import { Box, Input, Textarea } from '@chakra-ui/react'
+import { Box, Button, FormControl, Input, Textarea } from '@chakra-ui/react'
 import React, { useState } from 'react'
 
 
@@ -25,14 +25,20 @@ const ContactPage = () => {
     <Box height="90vh"   backgroundImage={image} backgroundPosition="center" backgroundSize="cover" >
 
  {/* contact -----input for forms --------- */}
-      <Box  shadow="2xl" background="#27272a" borderRadius="8px"  border="2px  #ffffff" height="auto" width={{base:"90%", sm: "65%", md: "50%", lg: "35%",xl: "35%",'2xl': "35%"}} p="20px" position="relative" left="5%"  top="25%">
+      <Box  shadow="2xl" background="#27272a" borderRadius="8px"  border="2px  #ffffff" height="auto" width={{base:"90%", sm: "60%", md: "45%", lg: "35%",xl: "30%",'2xl': "30%"}} p="20px" position="relative" left="5%"  top="20%">
   
-  <Input placeholder='Type Receiver Email' width="90%"  focusBorderColor="white"  m="20px 0px" color="white" name="to"  value={state.to} onChange={handleChange} />
+  <FormControl isRequired>
+  <Input placeholder='Type Receiver Email' width="100%"  focusBorderColor="white"  m="20px 0px" color="white" name="to"  value={state.to} onChange={handleChange} />
+</FormControl>
 
-  <Input placeholder='devisingh9871686098@gmail.com' width="90%"  focusBorderColor="white" m="20px 0px" color="white" name="from"  value={state.from}  />
+  <Input placeholder='devisingh9871686098@gmail.com' width="100%"  focusBorderColor="white" m="20px 0px" color="white" name="from"  value={state.from}  />
 
-  <Textarea placeholder='Type your message...' width="90%" focusBorderColor="white" m="30px 0px" color="white" name="text" value={state.text} onChange={handleChange} />
+  <FormControl isRequired>
+  <Textarea placeholder='Type your message...' width="100%" focusBorderColor="white" m="30px 0px" color="white" name="text" value={state.text} onChange={handleChange} />
+   </FormControl>
 
+   <Button colorScheme='facebook' m="30px 0px" width="100%">Send </Button>
+    
       </Box>
     </Box>
   )
