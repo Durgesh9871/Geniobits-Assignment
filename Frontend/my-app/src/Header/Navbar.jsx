@@ -36,7 +36,7 @@ export default function MainNavbar() {
   const toast=useToast()
   
 
-  let token = JSON.parse(localStorage.getItem("token")) || null;
+  let tokenLog = JSON.parse(localStorage.getItem("tokenLog")) || null;
 
   // manage modal useDisclosure
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -46,7 +46,7 @@ export default function MainNavbar() {
    const location = useLocation()
  
    const checking=()=>{
-    if(!token)
+    if(!tokenLog)
     {
       toast({
         position: "top",
@@ -114,7 +114,7 @@ export default function MainNavbar() {
             <DesktopNav />
           </Flex>
         </Flex>
-        {token && (
+        {tokenLog && (
   <>
     
     {/* <Button
@@ -128,7 +128,7 @@ export default function MainNavbar() {
     </Button> */}
   </>
 )}
-{token && (
+{!tokenLog && (
   <Stack
     flex={{ base: 1, md: 0 }}
     justify="flex-end"
