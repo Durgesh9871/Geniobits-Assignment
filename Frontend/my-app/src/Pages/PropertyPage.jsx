@@ -6,7 +6,7 @@ import { Search } from '../ComponentsSearchbar/Search'
 const PropertyPage = () => {
 
   return (
-    <Box border="2px solid red" >
+    <Box  >
        
        <Search />
     </Box>

@@ -37,6 +37,7 @@ const Search = () => {
 	useEffect(() => {
 		dispatch(getPropertyData(page))
 	}, [page]);
+	console.log(page)
    
 	// console.log(post)
 
@@ -107,16 +108,8 @@ const Search = () => {
 								// console.log(item)
 								return (
 										<ProductBox
-											key={item._id}
-											id={item._id}
-											src={item.Images}
-                                            mainImage={item.mainImage}
-											name={item.title}
-											model={item.brand}
-											price={item.price}
-											review={item.rating}
-											realPrice={item.realPrice}
-											isLaptopLoading={true}
+											key={item.id}
+											loading={true}
 											allData={item}
 										/>
 								
