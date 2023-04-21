@@ -89,7 +89,7 @@ const Search = () => {
 				style={{ border: '1px  green', height: 'auto', width: '100%' }}
 			>
 				<SimpleGrid
-					columns={{ base: 1, sm: 1, md: 2, lg: 3, xl: 3, '2xl': 3 }}
+					columns={{ base: 1, sm: 1, md: 2, lg: 3, xl: 4, '2xl': 4 }}
 					spacingY={10}
 				>
 					{!loading &&
