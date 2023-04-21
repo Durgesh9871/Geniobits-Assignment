@@ -20,20 +20,34 @@ const ContactPage = () => {
   }
 // for sending email --------------
 // 4df665f5-9ae8-4d44-95c6-c5b2bce25b5a -- token we get from smptjs.com
- 
+//  email  - roshnisingh987183@gmail.com 
 
+const toast = useToast()
 const handleForm = ()=>{
-console.log(state ,"satte")
+
   const config = {
-    SecureToken : "4df665f5-9ae8-4d44-95c6-c5b2bce25b5a",
-     To :  state.to ,
-    From : "devisingh9871686098@gmail.com" ,
-    Subject : "Interested in this property",
-    Body : state.text
-   }
+    Username : "devisingh9871686098@gmail.com",
+    Password : "73C8A236C130FB8C2D87FDB1B19AC74BD0B1",
+    Host : "smtp.elasticemail.com",
+    Port:2525 , 
+    To : state.to ,
+   From : "devisingh9871686098@gmail.com",
+   Subject : "Real State",
+   Body : state.text
+  }
+
 console.log(config ,"config")
   if(window.Email){
-    window.Email.send(config).then(()=> alert('Email Sent')).then(()=> {
+    window.Email.send(config).then(()=> 
+    toast({
+      title: 'Email Sent.',
+      position:"top" ,
+      description: "Email Sent Successfully",
+      status: 'success',
+      duration: 3000,
+      isClosable: true,
+    })
+    ).then(()=> {
       setState({
         to:"" ,
         from :"",
