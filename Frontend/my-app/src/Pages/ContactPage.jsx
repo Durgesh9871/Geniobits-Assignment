@@ -2,7 +2,7 @@ import { Box, Button, FormControl, Input, Textarea } from '@chakra-ui/react'
 import React, { useState } from 'react'
 import { useToast } from '@chakra-ui/react'
 
-
+const message = JSON.parse(localStorage.getItem("messege")) || []
 
 const ContactPage = () => {
   const [state , setState] = useState({
@@ -20,10 +20,16 @@ const ContactPage = () => {
   }
 // for sending email --------------
 // 4df665f5-9ae8-4d44-95c6-c5b2bce25b5a -- token we get from smptjs.com
-//  email  - roshnisingh987183@gmail.com 
 
 const toast = useToast()
 const handleForm = ()=>{
+  let obj = {
+    text:state.text ,
+    to:state.to 
+  }
+  message.push(obj)
+  localStorage.setItem("messege" , JSON.stringify(message))
+
 
   const config = {
     Username : "devisingh9871686098@gmail.com",
@@ -36,7 +42,7 @@ const handleForm = ()=>{
    Body : state.text
   }
 
-console.log(config ,"config")
+// console.log(config ,"config")
   if(window.Email){
     window.Email.send(config).then(()=> 
     toast({
