@@ -2,6 +2,7 @@ import { Box, Heading, Skeleton, SkeletonText, Text } from '@chakra-ui/react'
 import React, { useState } from 'react'
 import { Image } from '@chakra-ui/react'
 import "./product.css"
+import { Link } from 'react-router-dom'
 
 
 const ProductBox = ({allData , loading}) => {
@@ -26,13 +27,14 @@ const ProductBox = ({allData , loading}) => {
     position:"relative" , 
 }
 
+// console.log(id)
   
   return (
     <Box border="2px  red" shadow="base" w={{base:"80vw", sm: "55vw", md: "32vw", lg: "23vw" ,xl: "23vw",'2xl': "23vw",}} h={{base:"375px", sm: "375px", md: "385px", lg: "385px" ,xl: "385px",'2xl': "385px",}} style={style}>
 
     {/* Image box -------------------- */}
     <Skeleton isLoaded={loading}>  <Box className="image">
-    <Image className="img" src={image} alt={id} height="255px"  width="315px" margin="auto"  />
+   <Link to={`${id}`}> <Image className="img" src={image} alt={id} height="255px"  width="315px" margin="auto"  /> </Link>
     </Box>
     </Skeleton>
 

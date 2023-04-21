@@ -1,0 +1,11 @@
+@media (min-width: 300px) and (max-width: 776px) {
+    .SingleProductMainImage {
+      margin: auto;
+    }
+  }
+  
+  .SingleProductMainDiv {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    max-width: 99%;
+  }
