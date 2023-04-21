@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './SearchBar.css';
-import { Box, Input, SimpleGrid } from '@chakra-ui/react';
+import { Box, Input, Select, SimpleGrid } from '@chakra-ui/react';
 import { SearchIcon } from '@chakra-ui/icons';
 import { LoadingIndicator } from './LoadingIndicator';
 import { useDispatch, useSelector } from 'react-redux';
@@ -12,6 +12,7 @@ import { ProductBox } from '../ComponentsHome/ProductBox';
 
 const Search = () => {
 	const [searchTitle, setSearchTitle] = useState('');
+	const [valueSearch , setValueSearch] = useState("")
 
 	 //  pagination 
 	 const [page , setPage] = useState(1)
@@ -37,7 +38,7 @@ const Search = () => {
 	useEffect(() => {
 		dispatch(getPropertyData(page))
 	}, [page]);
-	console.log(page)
+	// console.log(page)
    
 	// console.log(post)
 
@@ -57,9 +58,23 @@ const Search = () => {
 		  setPagePre(false)
 		},400)
 	   }
+
+	//    search ------select 
+
+	const handleChangeSearch = (e)=>{
+      setValueSearch(e.target.value)
+	}
+
+	console.log(valueSearch ,"sera")
 	
 	return (
 		<Box className="" display="block">
+			<Select placeholder='Select Search Category'  focusBorderColor="grey" width="250px" m="20px auto -15px auto" onChange={handleChangeSearch}>
+  <option value='Location'>Location</option>
+  <option value='Type'>Type</option>
+  <option value='Price'>Price</option>
+</Select>
+
 			<Box className="inputTag" >
 				<SearchIcon fontSize="20px" position="relative" left="30px" color="#fff"  />
 				<Input
