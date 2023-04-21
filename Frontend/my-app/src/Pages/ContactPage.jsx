@@ -6,7 +6,7 @@ import React, { useState } from 'react'
 const ContactPage = () => {
   const [state , setState] = useState({
     to:"" ,
-    from :"" ,
+    from:"" ,
     text :"",
   })
  
@@ -29,7 +29,7 @@ const ContactPage = () => {
   
   <Input placeholder='Type Receiver Email' width="90%"  focusBorderColor="white"  m="20px 0px" color="white" name="to"  value={state.to} onChange={handleChange} />
 
-  <Input placeholder='Type Sender Email' width="90%"  focusBorderColor="white" m="20px 0px" color="white" name="from" value={state.from} onChange={handleChange} />
+  <Input placeholder='devisingh9871686098@gmail.com' width="90%"  focusBorderColor="white" m="20px 0px" color="white" name="from"  value={state.from}  />
 
   <Textarea placeholder='Type your message...' width="90%" focusBorderColor="white" m="30px 0px" color="white" name="text" value={state.text} onChange={handleChange} />
 
