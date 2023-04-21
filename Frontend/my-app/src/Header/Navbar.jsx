@@ -25,21 +25,23 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import "./navbar.css"
-
+import Reg from "../components/Registration/Reg"
+import Login from "../components/Login/Login";
 
 
 
 export default function MainNavbar() {
-  
 
   const { isOpen, onToggle } = useDisclosure();
+
   const toast=useToast()
   
-
   let tokenLog = JSON.parse(localStorage.getItem("tokenLog")) || null;
 
   // manage modal useDisclosure
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [page, setPage] = useState(false);
+
   const openModal = () => setModalIsOpen(true);
   const closeModal = () => setModalIsOpen(false);
    
@@ -147,7 +149,15 @@ export default function MainNavbar() {
 )}
 
       </Flex>
+{/* login model */}
 
+<Modal size="4xl" isOpen={modalIsOpen} onClose={closeModal}>
+        {page ? (
+          <Reg page={page} setPage={setPage} />
+        ) : (
+          <Login onClose={closeModal} page={page} setPage={setPage} />
+        )}
+      </Modal>
 
       <Collapse in={isOpen} animateOpacity>
         <MobileNav />

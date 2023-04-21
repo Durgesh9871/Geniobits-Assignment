@@ -6,7 +6,7 @@ import { SearchIcon } from '@chakra-ui/icons';
 import { LoadingIndicator } from './LoadingIndicator';
 import { useDispatch, useSelector } from 'react-redux';
 import { Pagination } from './Pagination';
-import {getPropertyData} from "../Redux/action"
+import {getPropertyData} from "../Redux/GetData/action"
 import { ProductBox } from '../ComponentsHome/ProductBox';
 
 
@@ -26,9 +26,9 @@ const Search = () => {
   
    const {loading , realState , isError} = useSelector((state)=>{
         return {
-            loading:state.loading ,
-            realState:state.realState ,
-            isError:state.isError
+            loading:state.realStateReducer.loading ,
+            realState:state.realStateReducer.realState ,
+            isError:state.realStateReducer.isError
         }
     })
 	
