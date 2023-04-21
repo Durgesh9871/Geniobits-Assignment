@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   ModalContent,
   ModalOverlay,
@@ -22,6 +22,8 @@ import "./Login.css";
 import { Link as RouteLink } from "react-router-dom";
 import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 import FgLogo from '../img/fg-logo.png';
+import {useDispatch , useSelector} from "react-redux"
+import {getUserData} from "../../Redux/Authentication/action"
 
 const Login = ({ setPage, onClose }) => {
 
@@ -30,8 +32,22 @@ const Login = ({ setPage, onClose }) => {
   const [pwd, setPwd] = useState("");
 
 
+  const {loading , userData , isError} = useSelector((state)=>{
+    return {
+        loading:state.ReducerAuth.loading ,
+        userData:state.ReducerAuth.userData ,
+        isError:state.ReducerAuth.isError
+    }
+})
+console.log(userData ,"bhj")
+  const dispatch = useDispatch()
+
+  useEffect(()=>{
+   dispatch(getUserData)
+  },[])
+
   const handleSubmit = ()=>{
-    
+
   }
  
 

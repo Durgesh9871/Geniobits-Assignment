@@ -20,7 +20,7 @@ const Search = () => {
    const [pagePre , setPagePre] = useState(false)
 
 
-   console.log(searchTitle ,"dbd")
+//    console.log(searchTitle ,"dbd")
   
   const nextPageDisable = 3
   

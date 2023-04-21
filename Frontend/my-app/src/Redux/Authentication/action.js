@@ -10,10 +10,10 @@ const sendUserData = (body)=>(dispatch)=>{
 }
 
 const getUserData = (dispatch)=>{
-    dispatch({type:"GET_DATA_LOADING"})
+    dispatch({type:"GET_DATA_LOADING_AUTH"})
     return axios.get(`https://long-pear-giraffe-gown.cyclic.app/api/realStateLogin`)
-    .then((res)=> dispatch({type:"GET_DATA_SUCCESS" , payload:res.data}))
-    .catch((err)=> dispatch({type:"GET_DATA_ERROR"}))
+    .then((res)=> dispatch({type:"GET_DATA_SUCCESS_AUTH" , payload:res.data}))
+    .catch((err)=> dispatch({type:"GET_DATA_ERROR_AUTH"}))
    
    } 
-export {sendUserData}
+export {sendUserData ,getUserData}
