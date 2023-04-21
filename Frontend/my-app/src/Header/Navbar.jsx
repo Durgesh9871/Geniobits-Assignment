@@ -323,11 +323,11 @@ const NAV_ITEMS = [
     children: [
       {
         label: "Property",
-        href: "/kml",
+        href: "/propertyList",
       },
       {
         label: "Blog",
-        href: "/",
+        href: "/propertyList",
       },
     ],
   },
