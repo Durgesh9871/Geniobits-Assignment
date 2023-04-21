@@ -39,7 +39,7 @@ const Login = ({ setPage, onClose }) => {
         isError:state.ReducerAuth.isError
     }
 })
-console.log(userData ,"bhj")
+// console.log(userData ,"user")
   const dispatch = useDispatch()
 
   useEffect(()=>{

@@ -1,17 +1,29 @@
-import { Box, Heading, Skeleton, SkeletonText, Text } from '@chakra-ui/react'
+import { Box, Heading, Skeleton, SkeletonText, Text, useToast } from '@chakra-ui/react'
 import React, { useState } from 'react'
 import { Image } from '@chakra-ui/react'
 import "./product.css"
-import { Link } from 'react-router-dom'
+import { Link, json } from 'react-router-dom'
 
+
+const saveProperty = JSON.parse(localStorage.getItem("saveProperty")) || []
 
 const ProductBox = ({allData , loading}) => {
   const {type , price , adress , location , description , image , id} = allData
     const [effect , setEffect] = useState(false)
 
+    const toast = useToast()
 
     const saveItem = ()=>{
-
+      saveProperty.push(allData)
+      localStorage.setItem("saveProperty" , JSON.stringify(saveProperty))
+      toast({
+        title: 'Property Saved',
+        position:"top" ,
+        description: "Property Saved, you can check it in saved items",
+        status: 'success',
+        duration: 3000,
+        isClosable: true,
+      })
     }
 
     // hover for saving items ------
