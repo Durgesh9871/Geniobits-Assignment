@@ -20,7 +20,7 @@ const Search = () => {
    const [pagePre , setPagePre] = useState(false)
 
 
-   
+   console.log(searchTitle ,"dbd")
   
   const nextPageDisable = 3
   
@@ -65,14 +65,14 @@ const Search = () => {
       setValueSearch(e.target.value)
 	}
 
-	console.log(valueSearch ,"sera")
+	// console.log(valueSearch ,"sera")
 	
 	return (
 		<Box className="" display="block">
 			<Select placeholder='Select Search Category'  focusBorderColor="grey" width="250px" m="20px auto -15px auto" onChange={handleChangeSearch}>
   <option value='Location'>Location</option>
   <option value='Type'>Type</option>
-  <option value='Price'>Price</option>
+  <option value='description'>Description</option>
 </Select>
 
 			<Box className="inputTag" >
@@ -90,7 +90,7 @@ const Search = () => {
 						xl: '50%',
 						'2xl': '50%',
 					}}
-					color="#fff"
+					color="black"
 					placeholder="Search the Products"
 					onChange={(e) => setSearchTitle(e.target.value)}
 					height="53px"
@@ -113,11 +113,20 @@ const Search = () => {
 							.filter((value) => {
 								if (searchTitle === '') {
 									return value;
-								} else if (
-									value.title.toLowerCase().includes(searchTitle.toLowerCase())
-								) {
+								} 
+								else if ((valueSearch == "Location" || valueSearch == "") && 
+									value.location.toLowerCase().includes(searchTitle.toLowerCase()) ){
 									return value;
 								}
+								else if ((valueSearch == "Type") && 
+									value.Type.toLowerCase().includes(searchTitle.toLowerCase()) ){
+									return value;
+								}
+								else if ((valueSearch == "description") && 
+									value.description.toLowerCase().includes(searchTitle.toLowerCase()) ){
+									return value;
+								}
+
 							})
 							.map((item) => {
 								// console.log(item)
