@@ -337,7 +337,7 @@ const NAV_ITEMS = [
     children: [
       {
         label: "Contact-Agent",
-        href: "/",
+        href: "/contact",
       },
     ],
   },
