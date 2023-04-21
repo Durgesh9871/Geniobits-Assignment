@@ -17,8 +17,10 @@ const realStateReducer = (oldstate=initialState , action)=>{
 
                  case "GET_DATA_ERROR":
                     return{...oldstate , isError:true , loading:false}
-                    
+
                 default:
                     return oldstate
                 }
 }
+
+export {realStateReducer}
