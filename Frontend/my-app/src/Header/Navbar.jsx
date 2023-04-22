@@ -336,7 +336,7 @@ const NAV_ITEMS = [
     children: [
       {
         label: "Contact Details",
-        href: "/detail",
+        href: "/detailpage",
       },
       {
         label: "Saved Property",
