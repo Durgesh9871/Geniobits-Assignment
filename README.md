@@ -39,7 +39,7 @@ Home page
 Property page
 
 ![Property page](https://github.com/Durgesh9871/ReadmeImages/blob/main/Geniobits/property.png?raw=true)
-![Property page](https://github.com/Durgesh9871/ReadmeImages/blob/main/Geniobits/property.png?raw=true)
+![Property page](https://github.com/Durgesh9871/ReadmeImages/blob/main/Geniobits/pagination.png?raw=true)
 
 
 Dashboard Page
