@@ -356,11 +356,11 @@ const NAV_ITEMS = [
     children: [
       {
         label: "Saved Property",
-        href: "/",
+        href: "/saved",
       },
       {
         label: "Contact History",
-        href: "/",
+        href: "/details",
       },
     ],
   },
