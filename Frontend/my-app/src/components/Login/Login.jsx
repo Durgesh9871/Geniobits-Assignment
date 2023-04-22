@@ -25,11 +25,14 @@ import FgLogo from '../img/fg-logo.png';
 import {useDispatch , useSelector} from "react-redux"
 import {getUserData} from "../../Redux/Authentication/action"
 
+
+const isLoginUser = JSON.parse(localStorage.getItem("isLoginUser")) || []
 const Login = ({ setPage, onClose }) => {
 
   const [showPassword, setShowPassword] = useState(false);
   const [email, setEmail] = useState("");
   const [pwd, setPwd] = useState("");
+  const toast = useToast();
 
 
   const {loading , userData , isError} = useSelector((state)=>{
@@ -39,7 +42,7 @@ const Login = ({ setPage, onClose }) => {
         isError:state.ReducerAuth.isError
     }
 })
-// console.log(userData ,"user")
+console.log(userData ,"user")
   const dispatch = useDispatch()
 
   useEffect(()=>{
@@ -47,7 +50,23 @@ const Login = ({ setPage, onClose }) => {
   },[])
 
   const handleSubmit = ()=>{
-
+   let userArray =  userData.filter((ele , i)=>{
+      return ele.email == email && ele.password == pwd
+    })
+    if(userArray.length > 0){
+  
+      isLoginUser.push(...isLoginUser , true)
+         localStorage.setItem("isLoginUser" ,JSON.stringify(isLoginUser))
+      toast({
+        position: "top",
+        title: "Login Successful.",
+        description: "Congratulation you've successfully Logged in.",
+        status: "success",
+        duration: 3000,
+        isClosable: true,
+        onCloseComplete: () => onClose(),
+      });
+    }
   }
  
 

@@ -33,10 +33,8 @@ import Login from "../components/Login/Login";
 export default function MainNavbar() {
 
   const { isOpen, onToggle } = useDisclosure();
-
-  const toast=useToast()
   
-  let tokenLog = JSON.parse(localStorage.getItem("tokenLog")) || null;
+  let isLoginUser = JSON.parse(localStorage.getItem("isLoginUser")) || null;
 
   // manage modal useDisclosure
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -44,24 +42,14 @@ export default function MainNavbar() {
 
   const openModal = () => setModalIsOpen(true);
   const closeModal = () => setModalIsOpen(false);
-   
-   const location = useLocation()
- 
-   const checking=()=>{
-    if(!tokenLog)
-    {
-      toast({
-        position: "top",
-        title: "Kindly Sign-In/Sign-UP first",
-        status: "warning",
-        duration: 3000,
-        isClosable: true,
-      })
-    }
+    
+
+   const handleLogout = ()=>{
+    localStorage.removeItem("isLoginUser");
+    openModal();
    }
 
-
-  
+  //  console.log(isLoginUser[0] ,"v")
 
   return (
     <Box
@@ -116,10 +104,10 @@ export default function MainNavbar() {
             <DesktopNav />
           </Flex>
         </Flex>
-        {tokenLog && (
+        {isLoginUser && (
   <>
     
-    {/* <Button
+    <Button
       bgColor="white"
       color="#4e8cf3"
       variant="outline"
@@ -127,10 +115,10 @@ export default function MainNavbar() {
       fontWeight="bold"
     >
       Logout
-    </Button> */}
+    </Button>
   </>
 )}
-{!tokenLog && (
+{(!isLoginUser || isLoginUser[0] == false) && (
   <Stack
     flex={{ base: 1, md: 0 }}
     justify="flex-end"
