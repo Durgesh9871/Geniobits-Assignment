@@ -1,0 +1,19 @@
+
+ APP FLOW ----
+
+1. Users can sign up and log in with secure authentication measures.
+
+2. Upon logging in, they are directed to the home page for real estate properties.
+
+3. From the home page, users can navigate to individual property pages and save properties by hovering over them.
+
+4. Each property page includes detailed information about the property, as well as an image magnification effect to view pictures more closely.
+
+5. Users can view their saved properties on a separate page.
+
+6. In addition, users have access to a dashboard where they can view contact details for properties they're interested in.
+
+7. If they wish to inquire about a property, they can use a contact form to get in touch with the appropriate party.
+
+
+In summary, the website flow involves signing up and logging in, browsing properties, saving properties, viewing saved properties, accessing a dashboard with contact details, and using a contact form to inquire about properties.
