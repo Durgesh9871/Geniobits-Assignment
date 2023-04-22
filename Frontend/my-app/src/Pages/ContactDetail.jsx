@@ -39,7 +39,7 @@ const ContactDetails = () => {
               <Tbody>
                 {/*  Loop starts from here ------------------- */}
 
-                {dashData.length > 0 && 
+                {dashData?.length > 0 && 
                   dashData?.map((item, i) => {
                     // console.log(item.signUpTime.slice(0,16));
                     return (
