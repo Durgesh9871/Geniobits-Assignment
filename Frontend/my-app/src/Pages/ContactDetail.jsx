@@ -35,6 +35,7 @@ const ContactDetails = () => {
                   <Th>Email</Th>
                   <Th>Messege</Th>
                 </Tr>
+                
               </Thead>
               <Tbody>
                 {/*  Loop starts from here ------------------- */}
