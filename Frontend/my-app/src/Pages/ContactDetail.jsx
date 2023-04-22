@@ -18,7 +18,7 @@ import {
 
 const dashData = JSON.parse(localStorage.getItem("messege"))
 
-const DashboardData = () => {
+const ContactDetails = () => {
     // console.log(dashData)
     const userImage = {
         male: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOnyqrxK4zSTIzWLbCQSBMxYgT2B4U0jv6JMJ-Aezj-kkKqSl7GShdy8jPY0HowqY6KibmsWomG6k&usqp=CAU&ec=48600112",
@@ -26,6 +26,7 @@ const DashboardData = () => {
 
   return (
     <Box m="20px 0px">
+      <Heading>Contact</Heading>
       <TableContainer color="grey">
             <Table variant="simple">
               <TableCaption placement="top" fontSize="18px">Contact Details </TableCaption>
@@ -67,4 +68,4 @@ const DashboardData = () => {
   )
 }
 
-export  {DashboardData}
+export  {ContactDetails}

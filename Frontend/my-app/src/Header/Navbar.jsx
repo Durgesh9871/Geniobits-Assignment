@@ -332,6 +332,20 @@ const NAV_ITEMS = [
   },
 
   {
+    label: "Dashboard",
+    children: [
+      {
+        label: "Contact Details",
+        href: "/detail",
+      },
+      {
+        label: "Saved Property",
+        href: "/saved",
+      },
+    ],
+  },
+
+  {
     label: "Contact",
     children: [
       {
@@ -340,27 +354,8 @@ const NAV_ITEMS = [
       },
     ],
   },
-  {
-    label: "Dashboard",
-    children: [
-      {
-        label: "Saved Property",
-        href: "/saved",
-      },
-      {
-        label: "Contact History",
-        href: "/contactDetails",
-      },
-    ],
-  },
-  {
-    label: "Contact Details",
-    children: [
-      {
-        label: "Contact History",
-        href: "/contactDetails",
-      },
-    ],
-  },
+  
+
+
   
 ];

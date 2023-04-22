@@ -4,8 +4,10 @@ import { HomePage } from '../Pages/HomePage'
 import { ContactPage } from '../Pages/ContactPage'
 import { PropertyPage } from '../Pages/PropertyPage'
 import { SinglePageProduct } from '../Pages/SinglePageProduct'
+import {ContactDetails}  from "../Pages/ContactDetail"
 import {SaveProperty} from "../Pages/saveProperty"
-import { DashboardData } from '../Pages/ContactDetail'
+
+
 
 const AllRoutes = () => {
   return (
@@ -14,8 +16,10 @@ const AllRoutes = () => {
       <Route path="/contact" element={<ContactPage />} ></Route>
       <Route path="/propertyList" element={<PropertyPage />} ></Route>
       <Route path="/propertyList/:id" element={<SinglePageProduct />}></Route>
+
+      <Route path="/detail" element={<ContactDetails />} ></Route>
       <Route path="/saved" element={<SaveProperty />} ></Route>
-      <Route path="/contactDetails" element={<DashboardData />} ></Route>
+      <Route path="/contact" element={<ContactPage />} ></Route>
 
     </Routes>
   )
