@@ -32,8 +32,7 @@ import Login from "../components/Login/Login";
 
 export default function MainNavbar() {
 
-  const { isOpen, onToggle } = useDisclosure();
-  
+  const { isOpen, onToggle } = useDisclosure();  
   let isLoginUser = JSON.parse(localStorage.getItem("isLoginUser")) || null;
 
   // manage modal useDisclosure
