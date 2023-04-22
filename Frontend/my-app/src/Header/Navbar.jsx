@@ -348,7 +348,7 @@ const NAV_ITEMS = [
       },
       {
         label: "Contact History",
-        href: "/details",
+        href: "/contactDetails",
       },
     ],
   },

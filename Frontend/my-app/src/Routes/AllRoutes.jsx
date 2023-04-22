@@ -5,7 +5,7 @@ import { ContactPage } from '../Pages/ContactPage'
 import { PropertyPage } from '../Pages/PropertyPage'
 import { SinglePageProduct } from '../Pages/SinglePageProduct'
 import {SaveProperty} from "../Pages/saveProperty"
-import { Dashboard } from '../Pages/Dashboard'
+import { DashboardData } from '../Pages/Dashboard'
 
 const AllRoutes = () => {
   return (
@@ -15,7 +15,7 @@ const AllRoutes = () => {
       <Route path="/propertyList" element={<PropertyPage />} ></Route>
       <Route path="/propertyList/:id" element={<SinglePageProduct />}></Route>
       <Route path="/saved" element={<SaveProperty />} ></Route>
-      <Route path="/details" element={<Dashboard />} ></Route>
+      <Route path="/contactDetails" element={<DashboardData />} ></Route>
 
     </Routes>
   )
