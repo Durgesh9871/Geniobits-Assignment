@@ -1,7 +1,7 @@
 # Geniobits-Assignment ( Real State Listing )
 Welcome to Real State Property Deal, your go-to destination for all your real estate needs. We are a property startup that aims to revolutionize the way people buy, sell, and rent properties...
 
- <h2> Kindly Check the deploy link ---> https://poetic-bienenstitch-6bf55d.netlify.app/   </h2>
+ <h2> Kindly Check the deploy link ---> https://superb-alfajores-6b9ed9.netlify.app/   </h2>
 
 
 Tech Stack 
