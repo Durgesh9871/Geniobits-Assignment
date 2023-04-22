@@ -5,7 +5,7 @@ import { ContactPage } from '../Pages/ContactPage'
 import { PropertyPage } from '../Pages/PropertyPage'
 import { SinglePageProduct } from '../Pages/SinglePageProduct'
 import {SaveProperty} from "../Pages/saveProperty"
-import { DashboardData } from '../Pages/Dashboard'
+import { DashboardData } from '../Pages/ContactDetail'
 
 const AllRoutes = () => {
   return (

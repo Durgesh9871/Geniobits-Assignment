@@ -353,5 +353,14 @@ const NAV_ITEMS = [
       },
     ],
   },
+  {
+    label: "Contact Details",
+    children: [
+      {
+        label: "Contact History",
+        href: "/contactDetails",
+      },
+    ],
+  },
   
 ];
