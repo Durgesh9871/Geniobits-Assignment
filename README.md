@@ -23,22 +23,29 @@ Functionality
 6. Single Detail Page ( Image magnifying ) 
 
 
+
+SignUp Page
+![SignUp page](https://github.com/Durgesh9871/ReadmeImages/blob/main/Geniobits/signup.png?raw=true)
+
+Login Page
+![Login page](https://github.com/Durgesh9871/ReadmeImages/blob/main/Geniobits/pagination.png?raw=true)
+
 Home page
 
-![homepage](https://user-images.githubusercontent.com/103739534/213977598-77bc9179-7295-4ccd-a16e-75d01773cb89.png)
+![homepage](https://github.com/Durgesh9871/ReadmeImages/blob/main/Geniobits/Home0.png?raw=true)
+![homepage](https://github.com/Durgesh9871/ReadmeImages/blob/main/Geniobits/home2.png?raw=true)
+![homepage](https://github.com/Durgesh9871/ReadmeImages/blob/main/Geniobits/home3.png?raw=true)
 
 Property page
 
-![men page](https://user-images.githubusercontent.com/103739534/213977590-3e47ddcc-a443-4bb7-91f8-06bf63918ad8.png)
+![Property page](https://github.com/Durgesh9871/ReadmeImages/blob/main/Geniobits/property.png?raw=true)
+![Property page](https://github.com/Durgesh9871/ReadmeImages/blob/main/Geniobits/property.png?raw=true)
 
-Saved Property
 
-![cart page](https://user-images.githubusercontent.com/103739534/213977584-0fbafd79-7b1d-422e-8de5-50d2c8b11d5f.png) 
+Dashboard Page
+![Save  page](https://github.com/Durgesh9871/ReadmeImages/blob/main/Geniobits/Screenshot%20(148).png?raw=true) 
+![Customer Detail page](https://github.com/Durgesh9871/ReadmeImages/blob/main/Geniobits/detail.png?raw=true) 
 
-Detail Page
+Contact
 
-![rating review page](https://github.com/Durgesh9871/ReadmeImages/blob/main/Fashion_Hunter/Screenshot%20(118).png?raw=true) 
-
-Dashboard
-
-![review page](https://github.com/Durgesh9871/ReadmeImages/blob/main/Fashion_Hunter/Screenshot%20(117).png?raw=true) 
+![Contact page](https://github.com/Durgesh9871/ReadmeImages/blob/main/Geniobits/contact.png?raw=true) 
