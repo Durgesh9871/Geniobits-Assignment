@@ -28,7 +28,7 @@ SignUp Page
 ![SignUp page](https://github.com/Durgesh9871/ReadmeImages/blob/main/Geniobits/signup.png?raw=true)
 
 Login Page
-![Login page](https://github.com/Durgesh9871/ReadmeImages/blob/main/Geniobits/pagination.png?raw=true)
+![Login page](https://github.com/Durgesh9871/ReadmeImages/blob/main/Geniobits/login.png?raw=true)
 
 Home page
 
