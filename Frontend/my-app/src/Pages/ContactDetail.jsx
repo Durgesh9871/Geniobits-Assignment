@@ -26,7 +26,6 @@ const ContactDetails = () => {
 
   return (
     <Box m="20px 0px">
-      <Heading>Contact</Heading>
       <TableContainer color="grey">
             <Table variant="simple">
               <TableCaption placement="top" fontSize="18px">Contact Details </TableCaption>
