@@ -19,7 +19,7 @@ import {
 const dashData = JSON.parse(localStorage.getItem("messege"))
 
 const Dashboard = () => {
-    console.log(dashData)
+    // console.log(dashData)
     const userImage = {
         male: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOnyqrxK4zSTIzWLbCQSBMxYgT2B4U0jv6JMJ-Aezj-kkKqSl7GShdy8jPY0HowqY6KibmsWomG6k&usqp=CAU&ec=48600112",
       };

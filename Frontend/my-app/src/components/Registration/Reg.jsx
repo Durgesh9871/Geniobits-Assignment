@@ -27,6 +27,8 @@ import { useState, useEffect } from "react";
 import { BsFillExclamationTriangleFill } from "react-icons/bs";
 import { ImCross } from "react-icons/im";
 import { FaCheck } from "react-icons/fa";
+import {useDispatch } from "react-redux"
+import { sendUserData } from "../../Redux/Authentication/action";
 
 
 const EMAIL_REGEX = /^[\w]+@([\w-]+\.)+[\w-]{3}$/g;
@@ -76,6 +78,7 @@ const Reg = ({ page, setPage }) => {
   }, [pwd, matchPwd]);
 
   
+  const dispatch = useDispatch()
 const handleSubmit = ()=>{
   const body={
   name:name , 
@@ -83,8 +86,17 @@ const handleSubmit = ()=>{
   password: pwd,
   gender:gender
   }
-  
-console.log(name, email  , pwd , gender)
+  dispatch(sendUserData(body))
+  toast({
+    position: "top",
+    title: "Sign Up Successful.",
+    description: "Congratulation you've successfully Signed Up.",
+    status: "success",
+    duration: 3000,
+    isClosable: true,
+    onCloseComplete: () => setPage(false),
+  });
+// console.log(name, email  , pwd , gender)
 }
 
   return (
